@@ -40,7 +40,7 @@ namespace Disconnected_Environment
         {
             koneksi.Open();
             string str = "select * from dbo.status_mahasiswa";
-            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
@@ -50,11 +50,11 @@ namespace Disconnected_Environment
         private void cbNama()
         {
             koneksi.Open();
-            string str = "select nama_mahasiswa from dbo.Mahasiswa where" +
-                "not EXIST(select id_status from dbo.status_mahasiswa where" +
-                "status_mahasiswa.nim = mahasiswa.nim";
+            string str = "select nama_mahasiswa from dbo.Mahasiswa where " +
+                "not EXISTS(select id_status from dbo.status_mahasiswa where " +
+                "status_mahasiswa.nim = mahasiswa.nim)";
             SqlCommand cmd = new SqlCommand(str, koneksi);
-            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
             cmd.ExecuteReader();
@@ -150,22 +150,21 @@ namespace Disconnected_Environment
             string str = "select count (*) from dbo.status_mahasiswa";
             SqlCommand cm = new SqlCommand(str, koneksi);
             count = (int)cm.ExecuteScalar();
-
             if (count == 0)
             {
                 kodeStatus = "1";
             }
             else
             {
-                string queryString = "select Max(id_status) from dbo.status_mahasiswa";
+                string queryStrings = "select Max(id_status) from dbo.status_mahasiswa";
                 SqlCommand cmStatusMahasiswaSum = new SqlCommand(str, koneksi);
                 int totalStatusMahasiswa = (int)cmStatusMahasiswaSum.ExecuteScalar();
                 int finalKodeStatusInt = totalStatusMahasiswa + 1;
                 kodeStatus = Convert.ToString(finalKodeStatusInt);
             }
-            string queryStrings = "insert into dbo.status_mahasiswa (id_status, nim " +
-                "status_mahasiswa, tahun_masuk)" + " values(@ids, @NIM, @sm, @tm)";
-            SqlCommand cmd = new SqlCommand(queryStrings, koneksi);
+            string queryString = "insert into dbo.status_mahasiswa (id_status, nim, " +
+                "status_mahasiswa, tahun_masuk)" + "values(@ids, @NIM, @sm, @tm)";
+            SqlCommand cmd = new SqlCommand(queryString, koneksi);
             cmd.CommandType = CommandType.Text;
 
             cmd.Parameters.Add(new SqlParameter("ids", kodeStatus));
@@ -175,8 +174,7 @@ namespace Disconnected_Environment
             cmd.ExecuteNonQuery();
             koneksi.Close();
 
-            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             refreshform();
             dataGridView();
         }

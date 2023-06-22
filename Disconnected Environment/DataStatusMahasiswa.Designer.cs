@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.statusmahasiswaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.act6DataSet1 = new Disconnected_Environment.Act6DataSet1();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -45,32 +47,19 @@
             this.act6DataSet = new Disconnected_Environment.Act6DataSet();
             this.statusmahasiswaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.status_mahasiswaTableAdapter = new Disconnected_Environment.Act6DataSetTableAdapters.status_mahasiswaTableAdapter();
-            this.act6DataSet1 = new Disconnected_Environment.Act6DataSet1();
             this.act6DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.statusmahasiswaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.status_mahasiswaTableAdapter1 = new Disconnected_Environment.Act6DataSet1TableAdapters.status_mahasiswaTableAdapter();
-            this.idstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusmahasiswaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tahunmasukDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.act6DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.act6DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.act6DataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.act6DataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idstatusDataGridViewTextBoxColumn,
-            this.nimDataGridViewTextBoxColumn,
-            this.statusmahasiswaDataGridViewTextBoxColumn,
-            this.tahunmasukDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.statusmahasiswaBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(87, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -78,6 +67,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(561, 208);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // statusmahasiswaBindingSource1
+            // 
+            this.statusmahasiswaBindingSource1.DataMember = "status_mahasiswa";
+            this.statusmahasiswaBindingSource1.DataSource = this.act6DataSet1;
+            // 
+            // act6DataSet1
+            // 
+            this.act6DataSet1.DataSetName = "Act6DataSet1";
+            this.act6DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnSave
             // 
@@ -203,56 +202,14 @@
             // 
             this.status_mahasiswaTableAdapter.ClearBeforeFill = true;
             // 
-            // act6DataSet1
-            // 
-            this.act6DataSet1.DataSetName = "Act6DataSet1";
-            this.act6DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // act6DataSet1BindingSource
             // 
             this.act6DataSet1BindingSource.DataSource = this.act6DataSet1;
             this.act6DataSet1BindingSource.Position = 0;
             // 
-            // statusmahasiswaBindingSource1
-            // 
-            this.statusmahasiswaBindingSource1.DataMember = "status_mahasiswa";
-            this.statusmahasiswaBindingSource1.DataSource = this.act6DataSet1;
-            // 
             // status_mahasiswaTableAdapter1
             // 
             this.status_mahasiswaTableAdapter1.ClearBeforeFill = true;
-            // 
-            // idstatusDataGridViewTextBoxColumn
-            // 
-            this.idstatusDataGridViewTextBoxColumn.DataPropertyName = "id_status";
-            this.idstatusDataGridViewTextBoxColumn.HeaderText = "id_status";
-            this.idstatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idstatusDataGridViewTextBoxColumn.Name = "idstatusDataGridViewTextBoxColumn";
-            this.idstatusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nimDataGridViewTextBoxColumn
-            // 
-            this.nimDataGridViewTextBoxColumn.DataPropertyName = "nim";
-            this.nimDataGridViewTextBoxColumn.HeaderText = "nim";
-            this.nimDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nimDataGridViewTextBoxColumn.Name = "nimDataGridViewTextBoxColumn";
-            this.nimDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // statusmahasiswaDataGridViewTextBoxColumn
-            // 
-            this.statusmahasiswaDataGridViewTextBoxColumn.DataPropertyName = "status_mahasiswa";
-            this.statusmahasiswaDataGridViewTextBoxColumn.HeaderText = "status_mahasiswa";
-            this.statusmahasiswaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusmahasiswaDataGridViewTextBoxColumn.Name = "statusmahasiswaDataGridViewTextBoxColumn";
-            this.statusmahasiswaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tahunmasukDataGridViewTextBoxColumn
-            // 
-            this.tahunmasukDataGridViewTextBoxColumn.DataPropertyName = "tahun_masuk";
-            this.tahunmasukDataGridViewTextBoxColumn.HeaderText = "tahun_masuk";
-            this.tahunmasukDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tahunmasukDataGridViewTextBoxColumn.Name = "tahunmasukDataGridViewTextBoxColumn";
-            this.tahunmasukDataGridViewTextBoxColumn.Width = 125;
             // 
             // DataStatusMahasiswa
             // 
@@ -276,11 +233,11 @@
             this.Text = "Data Status Mahasiswa";
             this.Load += new System.EventHandler(this.DataStatusMahasiswa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.act6DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.act6DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.act6DataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.act6DataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,9 +265,5 @@
         private Act6DataSet1 act6DataSet1;
         private System.Windows.Forms.BindingSource statusmahasiswaBindingSource1;
         private Act6DataSet1TableAdapters.status_mahasiswaTableAdapter status_mahasiswaTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idstatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nimDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusmahasiswaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tahunmasukDataGridViewTextBoxColumn;
     }
 }
