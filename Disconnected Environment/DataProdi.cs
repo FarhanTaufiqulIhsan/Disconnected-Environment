@@ -23,6 +23,7 @@ namespace Disconnected_Environment
             nmp.Enabled = false;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
+            idp.Enabled = false;
         }
         public DataProdi()
         {

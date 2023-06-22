@@ -40,7 +40,6 @@
             this.prodiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.prodiTableAdapter = new Disconnected_Environment.Act6DataSet1TableAdapters.prodiTableAdapter();
-            this.Add = new System.Windows.Forms.Button();
             this.idp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
@@ -93,7 +92,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(478, 296);
+            this.btnAdd.Location = new System.Drawing.Point(478, 313);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(83, 38);
             this.btnAdd.TabIndex = 3;
@@ -138,16 +137,6 @@
             // 
             this.prodiTableAdapter.ClearBeforeFill = true;
             // 
-            // Add
-            // 
-            this.Add.Location = new System.Drawing.Point(479, 351);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(82, 38);
-            this.Add.TabIndex = 7;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
-            // 
             // idp
             // 
             this.idp.Location = new System.Drawing.Point(252, 351);
@@ -183,7 +172,6 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.idp);
-            this.Controls.Add(this.Add);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nmp);
             this.Controls.Add(this.btnOpen);
@@ -216,7 +204,6 @@
         private System.Windows.Forms.BindingSource prodiBindingSource;
         private Act6DataSet1TableAdapters.prodiTableAdapter prodiTableAdapter;
         private System.Windows.Forms.BindingSource prodiBindingSource1;
-        private System.Windows.Forms.Button Add;
         private System.Windows.Forms.TextBox idp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBack;
