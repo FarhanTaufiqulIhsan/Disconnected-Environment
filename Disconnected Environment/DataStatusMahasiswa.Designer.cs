@@ -49,6 +49,7 @@
             this.status_mahasiswaTableAdapter = new Disconnected_Environment.Act6DataSetTableAdapters.status_mahasiswaTableAdapter();
             this.act6DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.status_mahasiswaTableAdapter1 = new Disconnected_Environment.Act6DataSet1TableAdapters.status_mahasiswaTableAdapter();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusmahasiswaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.act6DataSet1)).BeginInit();
@@ -211,11 +212,22 @@
             // 
             this.status_mahasiswaTableAdapter1.ClearBeforeFill = true;
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(678, 399);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // DataStatusMahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtNIM);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -265,5 +277,6 @@
         private Act6DataSet1 act6DataSet1;
         private System.Windows.Forms.BindingSource statusmahasiswaBindingSource1;
         private Act6DataSet1TableAdapters.status_mahasiswaTableAdapter status_mahasiswaTableAdapter1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

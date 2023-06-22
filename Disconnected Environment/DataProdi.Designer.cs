@@ -43,6 +43,7 @@
             this.Add = new System.Windows.Forms.Button();
             this.idp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prodiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.act6DataSet1)).BeginInit();
@@ -164,11 +165,22 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Id Prodi";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(676, 365);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 10;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // DataProdi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.idp);
             this.Controls.Add(this.Add);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.TextBox idp;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBack;
     }
 }
