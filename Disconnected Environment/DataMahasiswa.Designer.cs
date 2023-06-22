@@ -152,6 +152,9 @@
             // 
             this.cbxJenisKelamin.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mahasiswaBindingSource, "jenis_kelamin", true));
             this.cbxJenisKelamin.FormattingEnabled = true;
+            this.cbxJenisKelamin.Items.AddRange(new object[] {
+            "L",
+            "P"});
             this.cbxJenisKelamin.Location = new System.Drawing.Point(341, 142);
             this.cbxJenisKelamin.Name = "cbxJenisKelamin";
             this.cbxJenisKelamin.Size = new System.Drawing.Size(121, 24);

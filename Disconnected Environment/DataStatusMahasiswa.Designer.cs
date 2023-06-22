@@ -122,6 +122,9 @@
             // cbxStatusMahasiswa
             // 
             this.cbxStatusMahasiswa.FormattingEnabled = true;
+            this.cbxStatusMahasiswa.Items.AddRange(new object[] {
+            "Aktif",
+            "Tidak Akitf"});
             this.cbxStatusMahasiswa.Location = new System.Drawing.Point(324, 332);
             this.cbxStatusMahasiswa.Name = "cbxStatusMahasiswa";
             this.cbxStatusMahasiswa.Size = new System.Drawing.Size(121, 24);
